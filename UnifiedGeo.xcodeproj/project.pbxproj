@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		43D6854F1A6C1356002F1258 /* UnifiedGeo.h in Headers */ = {isa = PBXBuildFile; fileRef = 43D6854E1A6C1356002F1258 /* UnifiedGeo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43D685551A6C1356002F1258 /* UnifiedGeo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D685491A6C1356002F1258 /* UnifiedGeo.framework */; };
-		43D6855C1A6C1356002F1258 /* UnifiedGeoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D6855B1A6C1356002F1258 /* UnifiedGeoTests.swift */; };
+		43D685681A6C15DE002F1258 /* AGClientDeviceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D685651A6C15DE002F1258 /* AGClientDeviceInformation.swift */; };
+		43D685691A6C15DE002F1258 /* AGClientDeviceInformationImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D685661A6C15DE002F1258 /* AGClientDeviceInformationImpl.swift */; };
+		43D6856A1A6C15DE002F1258 /* AGDeviceRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D685671A6C15DE002F1258 /* AGDeviceRegistration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +30,9 @@
 		43D6854E1A6C1356002F1258 /* UnifiedGeo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnifiedGeo.h; sourceTree = "<group>"; };
 		43D685541A6C1356002F1258 /* UnifiedGeoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnifiedGeoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D6855A1A6C1356002F1258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		43D6855B1A6C1356002F1258 /* UnifiedGeoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifiedGeoTests.swift; sourceTree = "<group>"; };
+		43D685651A6C15DE002F1258 /* AGClientDeviceInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGClientDeviceInformation.swift; sourceTree = "<group>"; };
+		43D685661A6C15DE002F1258 /* AGClientDeviceInformationImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGClientDeviceInformationImpl.swift; sourceTree = "<group>"; };
+		43D685671A6C15DE002F1258 /* AGDeviceRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGDeviceRegistration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,9 @@
 		43D6854B1A6C1356002F1258 /* UnifiedGeo */ = {
 			isa = PBXGroup;
 			children = (
+				43D685651A6C15DE002F1258 /* AGClientDeviceInformation.swift */,
+				43D685661A6C15DE002F1258 /* AGClientDeviceInformationImpl.swift */,
+				43D685671A6C15DE002F1258 /* AGDeviceRegistration.swift */,
 				43D6854E1A6C1356002F1258 /* UnifiedGeo.h */,
 				43D6854C1A6C1356002F1258 /* Supporting Files */,
 			);
@@ -88,7 +95,6 @@
 		43D685581A6C1356002F1258 /* UnifiedGeoTests */ = {
 			isa = PBXGroup;
 			children = (
-				43D6855B1A6C1356002F1258 /* UnifiedGeoTests.swift */,
 				43D685591A6C1356002F1258 /* Supporting Files */,
 			);
 			path = UnifiedGeoTests;
@@ -209,6 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D685681A6C15DE002F1258 /* AGClientDeviceInformation.swift in Sources */,
+				43D685691A6C15DE002F1258 /* AGClientDeviceInformationImpl.swift in Sources */,
+				43D6856A1A6C15DE002F1258 /* AGDeviceRegistration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +225,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43D6855C1A6C1356002F1258 /* UnifiedGeoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +403,7 @@
 				43D685611A6C1356002F1258 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43D685621A6C1356002F1258 /* Build configuration list for PBXNativeTarget "UnifiedGeoTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +412,7 @@
 				43D685641A6C1356002F1258 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

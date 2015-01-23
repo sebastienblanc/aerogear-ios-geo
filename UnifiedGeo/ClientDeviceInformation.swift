@@ -17,39 +17,16 @@
 
 import Foundation
 
-/**
- * Represents the set of allowed device metadata.
- */
-@objc 
-public protocol AGClientDeviceInformation {
-    
-       
-    /**
-     * The ID of the mobile Variant, for which this client will be registered.
-     */
+
+public protocol ClientDeviceInformation {    
+
     var variantID: String? { get set }
     
-    /**
-     * The mobile Variant's secret.
-     */
     var variantSecret: String? { get set }
     
-    /**
-     * Application specific alias to identify users with the system.
-     * E.g. email address or username
-     */
     var alias: String? { get set }
     
-    /**
-    * Device's longitude
-    */
-    var longitude: NSNumber? { get set }
+    var longitude: Double? { get set }
 
-    /**
-    * Device's latitude
-    */
-    var latitude: NSNumber? { get set }
-
-    
-    
+    var latitude: Double? { get set }
 }

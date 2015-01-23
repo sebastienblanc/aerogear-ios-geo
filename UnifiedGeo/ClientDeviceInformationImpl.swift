@@ -17,16 +17,13 @@
 
 import Foundation
 
-/**
- * Internal implementation of the AGClientDeviceInformation protocol
- */
-class AGClientDeviceInformationImpl: NSObject, AGClientDeviceInformation {
+class ClientDeviceInformationImpl: NSObject, ClientDeviceInformation {
     
     var variantID: String?
     var variantSecret: String?
     var alias: String?
-    var longitude: NSNumber?
-    var latitude: NSNumber?
+    var longitude: Double?
+    var latitude: Double?
     
     override init() {
         super.init()        

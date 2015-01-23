@@ -17,30 +17,16 @@
 
 import Foundation
 
-/**
- * Internal implementation of the AGClientDeviceInformation protocol
- */
-class AGClientDeviceInformationImpl: NSObject, AGClientDeviceInformation {
+
+public protocol ClientDeviceInformation {    
+
+    var apiKey: String? { get set }
     
-    var variantID: String?
-    var variantSecret: String?
-    var alias: String?
-    var longitude: NSNumber?
-    var latitude: NSNumber?
+    var apiSecret: String? { get set }
     
-    override init() {
-        super.init()        
-    }
+    var alias: String? { get set }
     
-    func extractValues() -> [String: AnyObject] {
-        var jsonObject =  [String: AnyObject]()
-        
-        jsonObject["alias"] = alias
-        jsonObject["longitude"] = longitude
-        jsonObject["latitude"] = latitude
-        
-        return jsonObject;
-    }
-    
-       
+    var longitude: Double? { get set }
+
+    var latitude: Double? { get set }
 }

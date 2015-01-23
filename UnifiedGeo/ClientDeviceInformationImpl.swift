@@ -17,39 +17,27 @@
 
 import Foundation
 
-/**
- * Represents the set of allowed device metadata.
- */
-@objc 
-public protocol AGClientDeviceInformation {
+class ClientDeviceInformationImpl: NSObject, ClientDeviceInformation {
+    
+    var apiKey: String?
+    var apiSecret: String?
+    var alias: String?
+    var longitude: Double?
+    var latitude: Double?
+    
+    override init() {
+        super.init()        
+    }
+    
+    func extractValues() -> [String: AnyObject] {
+        var jsonObject =  [String: AnyObject]()
+        
+        jsonObject["alias"] = alias
+        jsonObject["longitude"] = longitude
+        jsonObject["latitude"] = latitude
+        
+        return jsonObject;
+    }
     
        
-    /**
-     * The ID of the mobile Variant, for which this client will be registered.
-     */
-    var variantID: String? { get set }
-    
-    /**
-     * The mobile Variant's secret.
-     */
-    var variantSecret: String? { get set }
-    
-    /**
-     * Application specific alias to identify users with the system.
-     * E.g. email address or username
-     */
-    var alias: String? { get set }
-    
-    /**
-    * Device's longitude
-    */
-    var longitude: NSNumber? { get set }
-
-    /**
-    * Device's latitude
-    */
-    var latitude: NSNumber? { get set }
-
-    
-    
 }

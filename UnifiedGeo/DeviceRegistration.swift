@@ -48,8 +48,8 @@ public class DeviceRegistration: NSObject, NSURLSessionTaskDelegate {
         
             clientInfo(config: clientInfoObject)
             
-            assert(clientInfoObject.variantID != nil, "'variantID' should be set")
-            assert(clientInfoObject.variantSecret != nil, "'variantSecret' should be set");
+            assert(clientInfoObject.apiKey != nil, "'variantID' should be set")
+            assert(clientInfoObject.apiSecret != nil, "'variantSecret' should be set");
             
             // set up our request
             let request = NSMutableURLRequest(URL: serverURL.URLByAppendingPathComponent("rest/installations"))
@@ -57,7 +57,7 @@ public class DeviceRegistration: NSObject, NSURLSessionTaskDelegate {
             request.HTTPMethod = "POST"
             
             // apply HTTP Basic
-            let basicAuthCredentials: NSData! = "\(clientInfoObject.variantID!):\(clientInfoObject.variantSecret!)".dataUsingEncoding(NSUTF8StringEncoding)
+            let basicAuthCredentials: NSData! = "\(clientInfoObject.apiKey!):\(clientInfoObject.apiSecret!)".dataUsingEncoding(NSUTF8StringEncoding)
             let base64Encoded = basicAuthCredentials.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(0))
             
             request.setValue("Basic \(base64Encoded)", forHTTPHeaderField: "Authorization")

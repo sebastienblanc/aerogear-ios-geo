@@ -19,8 +19,8 @@ import Foundation
 
 class ClientDeviceInformationImpl: NSObject, ClientDeviceInformation {
     
-    var variantID: String?
-    var variantSecret: String?
+    var apiKey: String?
+    var apiSecret: String?
     var alias: String?
     var longitude: Double?
     var latitude: Double?

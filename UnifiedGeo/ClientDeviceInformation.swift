@@ -20,9 +20,9 @@ import Foundation
 
 public protocol ClientDeviceInformation {    
 
-    var variantID: String? { get set }
+    var apiKey: String? { get set }
     
-    var variantSecret: String? { get set }
+    var apiSecret: String? { get set }
     
     var alias: String? { get set }
     
